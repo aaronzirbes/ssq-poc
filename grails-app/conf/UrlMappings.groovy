@@ -7,7 +7,7 @@ class UrlMappings {
 			}
 		}
 
-		"/"(view:"/index")
+		"/"(controller:'topSecret', action:'index')
 		"500"(view:'/error')
 	}
 }

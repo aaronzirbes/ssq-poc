@@ -1,10 +1,12 @@
+import org.zirbes.security.questions.*
+
 class BootStrap {
 
     def init = { servletContext ->
         environments {
             development {
                 Role adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
-                Role userRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
+                Role userRole = new Role(authority: 'ROLE_USER').save(flush: true)
 
                 User ajz = new User(username: 'ajz', enabled: true, password: 'password')
                 ajz.save(flush: true)
