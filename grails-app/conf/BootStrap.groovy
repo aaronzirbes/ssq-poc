@@ -16,9 +16,11 @@ class BootStrap {
                 assert User.count() == 1
                 assert Role.count() == 2
                 assert UserRole.count() == 1
+
+                SecurityQuestion whatIsYourName = new SecurityQuestion(question:'What is your name?').save(flush:true)
+                SecurityQuestion whatIsYourQuest = new SecurityQuestion(question:'What is your quest?').save(flush:true)
+                SecurityQuestion whatIsTheVelocity = new SecurityQuestion(question:'What is the air speed velocity of a laden swallow?').save(flush:true)
             }
         }
-    }
-    def destroy = {
     }
 }
